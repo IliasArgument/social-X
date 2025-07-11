@@ -1,7 +1,7 @@
-import { prisma } from "@/prisma";
 import Post from "./Post";
 import { auth } from "@clerk/nextjs/server";
 import InfiniteFeed from "./InfiniteFeed";
+import { prisma } from "@/app/prisma";
 
 const Feed = async ({ userProfileId }: { userProfileId?: string }) => {
   const { userId } = await auth();
