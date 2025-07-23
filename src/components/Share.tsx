@@ -3,9 +3,9 @@
 import React, { useActionState, useEffect, useRef, useState } from "react";
 import Image from "./Image";
 import NextImage from "next/image";
-import ImageEditor from "./ImageEditor";
 import { useUser } from "@clerk/nextjs";
 import { addPost } from "@/action";
+import ImageEditor from "./ImageEditor";
 
 const Share = () => {
   const [media, setMedia] = useState<File | null>(null);

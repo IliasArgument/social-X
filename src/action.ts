@@ -153,8 +153,11 @@ export const addPost = async (
   const imgType = formData.get("imgType");
 
   const uploadFile = async (file: File): Promise<UploadResponse> => {
-    const bytes = await file.arrayBuffer();
-    const buffer = Buffer.from(bytes);
+
+    const bytes = await file.arrayBuffer();// Читаем файл из formData, тип Blob или File
+
+    //Buffer — это специальный тип от Node.js для работы с бинарными данными (файлы, изображения, сокеты, и т. д.).
+    const buffer = Buffer.from(bytes);// Конвертируем в Node.js Buffer
 
     const transformation = `w-600,${
       imgType === "square" ? "ar-1-1" : imgType === "wide" ? "ar-16-9" : ""
