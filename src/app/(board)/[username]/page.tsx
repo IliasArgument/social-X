@@ -19,7 +19,7 @@ const UserPage = async ({
     where: { username: username },
     include: {
       _count: { select: { followers: true, followings: true } },
-      followings: userId ? { where: { followerId: userId } } : undefined,
+      followings: userId ? { where: { followerId: userId } } : undefined,// Проверяем, подписан ли текущий пользователь (userId) на найденного (username)
     },
   });
 
