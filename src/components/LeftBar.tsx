@@ -1,9 +1,9 @@
 import Link from "next/link";
 import Image from "./Image";
-import Socket from "./Socket";
-import Notification from "./Notification";
 import { currentUser } from "@clerk/nextjs/server";
+import Socket from "./Socket";
 import Logout from "./Logout";
+import Notification from "./Notification";
 
 const menuList = [
   {
