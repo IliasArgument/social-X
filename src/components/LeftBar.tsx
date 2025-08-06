@@ -70,6 +70,7 @@ const menuList = [
 
 const LeftBar = async () => {
   const user = await currentUser();
+  console.log(!!user, 'user leftbar')
 
   return (
     <div className="h-screen sticky top-0 flex flex-col justify-between pt-2 pb-8">
@@ -98,7 +99,7 @@ const LeftBar = async () => {
                   w={24}
                   h={24}
                 />
-                <span className="hidden xxl:inline">{item.name}</span>
+                <span className="xxl:inline">{item.name}</span>
               </Link>
             </div>
           ))}

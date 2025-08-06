@@ -49,7 +49,7 @@ const Notification = () => {
             </div>
           )}
         </div>
-        <span className="hidden xxl:inline">Notifications</span>
+        <span className=" xxl:inline">Notifications</span>
       </div>
       {open && (
         <div className="absolute -right-full p-4 rounded-lg bg-white text-black flex flex-col gap-4 w-max">

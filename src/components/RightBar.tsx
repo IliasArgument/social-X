@@ -1,7 +1,7 @@
 import Link from "next/link";
-import Recommendations from "./Recommendations";
 import Search from "./Search";
 import PopularTags from "./PopularTags";
+import Recommendations from "./Recommendation";
 
 const RightBar = () => {
   return (

@@ -36,8 +36,6 @@ app.prepare().then(() => {
   const io = new Server(httpServer);
 
   io.on("connection", (socket) => {
-    //socket.on() - получать сообщения
-    //socket.emit() - отправлять сообщения
     socket.on("newUser", (username) => {
       addUser(username, socket.id);
     });
@@ -45,7 +43,7 @@ app.prepare().then(() => {
     socket.on("sendNotification", ({ receiverUsername, data }) => {
       const receiver = getUser(receiverUsername);
 
-      io.to(receiver.socketId).emit("getNotification", { // Ищем получателя и отправляем ему
+      io.to(receiver.socketId).emit("getNotification", {
         id: uuidv4(),
         ...data,
       });

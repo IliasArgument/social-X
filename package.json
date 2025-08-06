@@ -2,6 +2,7 @@
   "name": "xui",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "node server.js",
     "build": "next build",
@@ -11,34 +12,35 @@
   "dependencies": {
     "@clerk/elements": "^0.23.38",
     "@clerk/nextjs": "^6.24.0",
-    "@prisma/client": "^6.11.1",
     "@tanstack/react-query": "^5.82.0",
     "imagekit": "^6.0.0",
     "imagekitio-next": "^1.0.1",
     "next": "^15.2.3",
-    "prisma": "^6.11.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-infinite-scroll-component": "^6.1.0",
     "socket.io": "^4.8.1",
     "socket.io-client": "^4.8.1",
     "timeago.js": "^4.0.2",
-    "ts-node": "^10.9.2",
     "uuid": "^11.1.0",
     "zod": "^4.0.5"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
-    "@types/node": "^20",
+    "@prisma/client": "^6.13.0",
+    "@types/node": "^20.19.9",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.1.0",
     "postcss": "^8",
+    "prisma": "^6.13.0",
     "tailwindcss": "^3.4.1",
-    "typescript": "^5"
+    "ts-node": "^10.9.2",
+    "tsx": "^4.20.3",
+    "typescript": "^5.9.2"
   },
   "prisma": {
-    "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
+    "seed": "tsx prisma/seed.ts"
   }
 }
